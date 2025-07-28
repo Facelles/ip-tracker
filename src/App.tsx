@@ -1,33 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main className='flex justify-center'>
+        <header className='flex flex-col items-center justify-center bg-[url("/pattern-bg-desktop.png")] h-[250px] w-full'>
+          <h1 className='text-xl font-bold text-white mb-10'> IP Address Tracker </h1>
+
+          <form action="" className='flex items-center border rounded overflow-hidden w-100'>
+            <input type="text" id="ip-tracker-input" placeholder='Search for any IP address or domain'
+             className='flex-grow pl-3 py-2 outline-none bg-white text-gray-400 placeholder-gray-400 border-none'/>
+            <button type='submit' className='flex-shrink-0 px-3 py-2 bg-black hover:bg-purple-300'>
+              <img src="/public/icon-arrow.svg" alt="icon" className='w-6 h-6' />
+            </button>
+          </form>
+
+        </header>
+      </main>
     </>
   )
 }
