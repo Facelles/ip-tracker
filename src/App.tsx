@@ -7,10 +7,10 @@ function App() {
 
   return (
     <>
-      <main className='flex justify-center'>
-        <header className='mb-20 flex flex-col items-center justify-center bg-[url("/pattern-bg-desktop.png")] h-[250px] w-full'>
+      <main className='flex flex-col justify-center'>
+        <header className='flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center bg-[url("/pattern-bg-desktop.png")] h-[250px] w-full'>
 
-          <h1 className='text-xl font-bold text-white mb-10'> IP Address Tracker </h1>
+          <h1 className='text-3xl font-bold text-white mb-5'> IP Address Tracker </h1>
 
           <form action="" className='flex items-center rounded overflow-hidden w-110'>
             <input type="text" id="ip-tracker-input" placeholder='Search for any IP address or domain'
@@ -22,8 +22,9 @@ function App() {
           </form>
 
         </header>
+        
+        <section className='flex flex-col items-center justify-center bg-cover bg-center bg-gray-200 min-h-screen w-full' />
 
-      
 
       </main>
     </>
