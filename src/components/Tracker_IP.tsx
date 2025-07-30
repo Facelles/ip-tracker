@@ -8,30 +8,34 @@ interface Location {
     timezone: string;
 }
 
-interface as {
+interface asInfo {
     name: string;
     domain: string;
 }
 
 interface SearchIp {
+    ip: string;
     location: Location[];
-    as: as[];
+    sIfno: asInfo[];
 }
 
 
-const key = import.meta.env.VITE_IPIFY_API_KEY;
+const API_KEY_IPIFY = import.meta.env.VITE_IPIFY_API_KEY;
 
 
 const Tracker_IP = () => {
   
+const [ipData, setIpData] = useState<SearchIp | null>(null)
 
+useEffect(() => {
+    
+}, [])
 
 
   return (
-    <>
-
-
-    </>
+    <div>
+        <p>{ipData?.ip}</p>
+    </div>
   )
 }
 

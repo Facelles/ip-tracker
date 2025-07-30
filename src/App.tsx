@@ -1,4 +1,5 @@
 import './App.css'
+import Tracker_IP from './components/Tracker_IP'
 
 function App() {
 
@@ -22,9 +23,13 @@ function App() {
           </form>
 
         </header>
+
+        <section>
+          <Tracker_IP></Tracker_IP>
+        </section>
         
         <section className='flex flex-col items-center justify-center bg-cover bg-center bg-gray-200 min-h-screen w-full' />
-
+        
 
       </main>
     </>
