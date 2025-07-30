@@ -28,7 +28,7 @@ const Tracker_IP = () => {
 const [ipData, setIpData] = useState<SearchIp | null>(null)
 
 useEffect(() => {
-    
+    // TODO: fetch GET from API 
 }, [])
 
 
