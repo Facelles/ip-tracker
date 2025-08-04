@@ -1,10 +1,14 @@
 import './App.css'
+import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
+import { useDebounce } from 'use-debounce'
 import Tracker_IP from './components/Tracker_IP'
 
 
+
 function App() {
-  const [ipValue, setIpValue] = useState<string>("8.8.8.8");
+  const [ipValue, setIpValue] = useState<string>("");
+  const [debounceIpValue] = useDebounce(ipValue, 500);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIpValue(e.target.value);
@@ -28,7 +32,7 @@ function App() {
              onChange={handleInputChange}
              />
             <button type='submit' className='flex-shrink-0 px-3 py-2 bg-black hover:bg-purple-300'>
-              <img src="/public/icon-arrow.svg" alt="icon" className='w-6 h-6' />
+              <img src="/icon-arrow.svg" alt="icon" className='w-6 h-6' />
 
             </button>
           </form>
@@ -36,7 +40,7 @@ function App() {
         </header>
 
         <section>
-          <Tracker_IP ipValue={ipValue} onChange={setIpValue} />
+          <Tracker_IP ipValue={debounceIpValue} onChange={setIpValue} />
         </section>
         
         <section className='flex flex-col items-center justify-center bg-cover bg-center bg-gray-200 min-h-screen w-full' />
